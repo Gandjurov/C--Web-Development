@@ -20,3 +20,26 @@ body {
     text-decoration: none;
     font-size: 17px;
 }
+
+.topnav a.logo {
+    padding: 0px;
+    padding-top: 4px;
+}
+
+.topnav a.right {
+    float: right;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #FEAE00;
+    color: white;
+}
+
+.main h1 {
+    font-size: 48px;
+}
