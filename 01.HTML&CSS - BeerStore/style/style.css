@@ -40,6 +40,12 @@ body {
     color: white;
 }
 
+main div {
+    background-color: #FEAE00;
+    color: black;
+    padding: 20px;
+}
+
 main h1 {
     font-size: 48px;
 }
