@@ -41,13 +41,21 @@ body {
 }
 
 main div {
+    display: block;
+    width: 50%;
     background-color: #FEAE00;
     color: black;
     padding: 20px;
+    text-align: left;
+}
+
+main h2 {
+    text-align: center;
 }
 
 main h1 {
     font-size: 48px;
+    text-align: center;
 }
 
 main table {
