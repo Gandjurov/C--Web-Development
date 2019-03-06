@@ -38,11 +38,16 @@ namespace SoftUniHttpSever
 
                 var responseText = File.ReadAllText("index.html");
 
-                var responseBytes = Encoding.UTF8.GetBytes("HTTP/1.0 200 OK" + Environment.NewLine + 
+                var responseBytes = Encoding.UTF8.GetBytes("HTTP/1.0 200 OK" + Environment.NewLine +
+                                                           //"Location: https://softuni.bg" + Environment.NewLine + Environment.NewLine + 
+                                                           //"Content-Type: text/html" + Environment.NewLine
+                                                           //"Content-Disposition: attachment; filename=index.html" + Environment.NewLine +
                                                            "Content-Length: " + responseText.Length +
                                                            Environment.NewLine + Environment.NewLine + 
                                                            responseText);
                 stream.Write(responseBytes);
+                //Thread.Sleep(10000);
+                //stream.Write(Encoding.UTF8.GetBytes("<h1>@</h1>"));
             }
 
         }
