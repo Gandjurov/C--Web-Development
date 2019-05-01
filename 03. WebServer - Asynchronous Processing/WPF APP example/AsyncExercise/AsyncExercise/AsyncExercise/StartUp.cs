@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AsyncExercise
@@ -7,8 +8,19 @@ namespace AsyncExercise
     {
         public static void Main()
         {
-            var number = Task.Run(() => NumberOfPrimesInInterval(2, 100000));
-            number.ContinueWith((task) => Console.WriteLine(task.Result));
+            Thread thread = new Thread(() => 
+            {
+                var result = NumberOfPrimesInInterval(2, 10000);
+                Console.WriteLine(result + " comes from thread #" + Thread.CurrentThread.ManagedThreadId);
+            });
+
+            thread.Start();
+
+            var number = Task.Run(() => NumberOfPrimesInInterval(2, 10000));
+            number.ContinueWith((task) => Console.WriteLine(task.Result + " comes from thread #" + Thread.CurrentThread.ManagedThreadId));
+
+
+            Console.WriteLine("Main thread #" + Thread.CurrentThread.ManagedThreadId);
 
             while (true)
             {
