@@ -1,0 +1,21 @@
+﻿<Window x:Class="MyWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyWpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="343,359,0,0" VerticalAlignment="Top" Width="421" Height="40" Click="Button_Click"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="27,372,0,0" VerticalAlignment="Top" Height="14" Width="84"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="134,371,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="Image1" HorizontalAlignment="Left" Height="129" Margin="10,10,0,0" VerticalAlignment="Top" Width="231"/>
+        <Image x:Name="Image2" HorizontalAlignment="Left" Height="129" Margin="269,10,0,0" VerticalAlignment="Top" Width="251"/>
+        <Image x:Name="Image3" HorizontalAlignment="Left" Height="129" Margin="545,10,0,0" VerticalAlignment="Top" Width="237"/>
+        <Image x:Name="Image4" HorizontalAlignment="Left" Height="141" Margin="10,183,0,0" VerticalAlignment="Top" Width="231"/>
+        <Image x:Name="Image5" HorizontalAlignment="Left" Height="141" Margin="269,183,0,0" VerticalAlignment="Top" Width="251"/>
+        <Image x:Name="Image6" HorizontalAlignment="Left" Height="141" Margin="545,183,0,0" VerticalAlignment="Top" Width="237"/>
+
+    </Grid>
+</Window>
