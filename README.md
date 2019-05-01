@@ -12,5 +12,5 @@ We create our own <strong>MVC framework</strong> based on <strong>C#</strong> an
 <ul>
 	<li><a href="https://github.com/Gandjurov/CSharp-Web-Development/tree/master/01.HTML%26CSS">HTML &amp; CSS</a></li>
 	<li><a href="https://github.com/Gandjurov/CSharp-Web-Development/tree/master/01.HTML%26CSS%20-%20BeerStore">HTML &amp; CSS - BeerStore</a></li>
-	<li><a href="https://github.com/Gandjurov/CSharp-Web-Development">Web Server HTTP Protocol</a></li>
+	<li><a href="https://github.com/Gandjurov/CSharp-Web-Development/tree/master/02.%20WebServerHTTPProtocol">Web Server HTTP Protocol</a></li>
 </ul>
