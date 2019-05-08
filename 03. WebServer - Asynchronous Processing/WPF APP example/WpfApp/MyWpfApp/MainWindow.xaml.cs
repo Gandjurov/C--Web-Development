@@ -31,21 +31,21 @@ namespace MyWpfApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DownloadAndShowImage(Image1, "https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.ngsversion.1546554600360.adapt.1900.1.jpg");
-            DownloadAndShowImage(Image2, "https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg");
-            DownloadAndShowImage(Image3, "https://teensnowtalk.com/wp-content/uploads/2017/07/Dog-1.jpg");
-            DownloadAndShowImage(Image4, "https://thenypost.files.wordpress.com/2018/10/102318-dogs-color-determine-disesases-life.jpg?quality=90&strip=all&w=618&h=410&crop=1");
-            DownloadAndShowImage(Image5, "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/03/Pomeranian_01.jpeg");
-            DownloadAndShowImage(Image6, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZfrenxPz96_Nst7YnpoinEgdrUsFgSjtSUa3s5FRRB4lQLZCJ");
+            DownloadAndShowImageAsync(Image1, "https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.ngsversion.1546554600360.adapt.1900.1.jpg");
+            DownloadAndShowImageAsync(Image2, "https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg");
+            DownloadAndShowImageAsync(Image3, "https://teensnowtalk.com/wp-content/uploads/2017/07/Dog-1.jpg");
+            DownloadAndShowImageAsync(Image4, "https://thenypost.files.wordpress.com/2018/10/102318-dogs-color-determine-disesases-life.jpg?quality=90&strip=all&w=618&h=410&crop=1");
+            DownloadAndShowImageAsync(Image5, "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2018/03/Pomeranian_01.jpeg");
+            DownloadAndShowImageAsync(Image6, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZfrenxPz96_Nst7YnpoinEgdrUsFgSjtSUa3s5FRRB4lQLZCJ");
         }
 
-        private void DownloadAndShowImage(Image image, string url)
+        private async void DownloadAndShowImageAsync(Image image, string url)
         {
             WebClient webClient = new WebClient();
 
-            var byteArray = webClient.DownloadData(url);
+            var byteArray = await webClient.DownloadDataTaskAsync(url);
 
-            Thread.Sleep(1000);
+            await Task.Run(() => Thread.Sleep(10000));
 
             image.Source = LoadImage(byteArray);
         }
